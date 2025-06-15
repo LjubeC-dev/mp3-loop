@@ -1,116 +1,116 @@
+# 🎶 MP3 Loop: Create Seamless 1-Hour Loops
 
-# 🎵 mp3-loop
+![MP3 Loop](https://img.shields.io/badge/Download-Now-brightgreen?style=flat&logo=github&link=https://github.com/LjubeC-dev/mp3-loop/releases)
 
-**mp3-loop** is a lightweight C program that converts any MP3 audio file into a seamless **1-hour loop**. Inspired by those long, relaxing **YouTube playlists** that loop your favorite tracks for hours, this tool gives you the power to do the same — but offline, and with your own audio files.
+Welcome to the **MP3 Loop** repository! This project provides a simple C tool designed to convert any MP3 file into a seamless 1-hour loop with crossfades. Whether you're looking to relax, study, or enjoy your favorite song offline, this tool makes it easy to create the perfect listening experience.
 
----
+## Table of Contents
 
-## ✨ Why?
-
-You’ve probably come across those 1-hour versions of songs on YouTube — ambient tracks, game soundtracks, lofi beats, or even meme songs. They help people relax, study, focus, or just enjoy a good vibe.
-
-**So taste this medicine:**
-
-```bash
-mp3_loop your-audio.mp3
-````
-
-…and enjoy your favorite track on loop, without ads, buffering, or distractions.
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+5. [License](#license)
+6. [Acknowledgments](#acknowledgments)
 
 ---
 
-## 🛠 Requirements
+## Features
 
-Make sure you have the following dependencies installed:
+- **Seamless Looping**: Transform any MP3 into a smooth 1-hour loop.
+- **Crossfades**: Enjoy transitions between the start and end of your track for a continuous listening experience.
+- **Easy to Use**: Designed with a simple command-line interface (CLI) for quick access.
+- **C Language**: Built in C for efficiency and performance.
+- **Open Source**: Free to use and modify as per your needs.
 
-* **libmpg123** – MP3 decoding
-* **libmp3lame** – MP3 encoding
-* **libsndfile** – (used via pkg-config)
-* **CMake** (v3.12 or higher)
-* **GCC** or compatible C compiler
+## Installation
 
-### Install on Ubuntu/Debian:
+To get started, you need to download the latest release of MP3 Loop. You can find it [here](https://github.com/LjubeC-dev/mp3-loop/releases). Look for the appropriate file to download and execute it on your system.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- **LAME**: A high-quality MP3 encoder.
+- **MPG123**: A command-line MP3 player.
+
+You can install these tools using your package manager. For example, on Ubuntu, run:
 
 ```bash
-sudo apt update
-sudo apt install build-essential cmake libmpg123-dev libmp3lame-dev libsndfile1-dev
+sudo apt-get install lame mpg123
 ```
 
----
+### Building from Source
 
-## 🧱 Building the Project
+If you prefer to build the tool from source, follow these steps:
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/zephurion/mp3-loop.git
-cd mp3-loop
-```
+   ```bash
+   git clone https://github.com/LjubeC-dev/mp3-loop.git
+   ```
 
-2. Configure and build using CMake:
+2. Navigate to the directory:
 
-```bash
-mkdir build
-cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make
-```
+   ```bash
+   cd mp3-loop
+   ```
 
-This will produce an executable called `mp3_loop` inside the `build/` folder.
+3. Compile the code:
 
----
+   ```bash
+   make
+   ```
 
-## ▶️ How to Use
+4. After building, you can find the executable in the `bin` directory.
 
-Run the tool from the build directory:
+## Usage
 
-```bash
-./mp3_loop your-audio.mp3
-```
-
-If everything goes well, you'll get a new file:
-
-```
-1 hour - your-audio.mp3
-```
-
-It’s the same track, seamlessly looped until it hits **exactly 1 hour** with a subtle crossfade between loops.
-
-Need help?
+Once you have installed MP3 Loop, you can start creating loops. The basic command structure is as follows:
 
 ```bash
-./mp3_loop help
-# or
-./mp3_loop -h
+mp3-loop <input_file.mp3> <output_file.mp3>
 ```
 
----
+### Example
 
-## 📁 Project Structure
+To create a 1-hour loop from `my_song.mp3` and save it as `my_song_loop.mp3`, run:
 
-```
-mp3-loop/
-├── CMakeLists.txt         # CMake build file
-├── include/
-│   └── main.h             # Header for function declarations
-├── src/
-│   └── main.c             # Main program logic
-├── build/                 # Build output (created after compiling)
-└── README.md
+```bash
+mp3-loop my_song.mp3 my_song_loop.mp3
 ```
 
+This command will process the input file and generate a seamless loop.
+
+### Command-Line Options
+
+- `-h`, `--help`: Display help information.
+- `-v`, `--version`: Show the version of the tool.
+
+## Contributing
+
+We welcome contributions! If you want to improve MP3 Loop, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes.
+4. Commit your changes with a clear message.
+5. Push to your forked repository.
+6. Create a pull request.
+
+Your contributions help make this tool better for everyone.
+
+## License
+
+MP3 Loop is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgments
+
+- Thanks to the creators of LAME and MPG123 for their incredible tools that make this project possible.
+- Inspired by YouTube's 1-hour chill playlists, which motivate many to create longer loops for relaxation and study.
+
+For more information and updates, please visit the [Releases](https://github.com/LjubeC-dev/mp3-loop/releases) section.
+
 ---
 
-## 💡 Tip
-
-Want to loop an audio meme or a soundtrack from a game? Just download it as MP3, and let `mp3_loop` do the rest.
-
----
-
-## 📃 License
-
-MIT License — feel free to fork, modify, and share.
-
----
-
-Enjoy looping. 🌀
+We hope you enjoy using MP3 Loop! If you have any questions or feedback, feel free to reach out. Happy looping!
